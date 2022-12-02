@@ -1,5 +1,4 @@
 import './App.css';
-import "bulma/css/bulma.min.css";
 import {useState} from "react";
 import {generateIpsum, wordLists} from "./code/words";
 import GenerationView from "./GenerationView";
