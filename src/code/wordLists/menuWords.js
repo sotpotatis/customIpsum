@@ -1,7 +1,7 @@
 /* menuWords.js
 Contains a list of lunch menu words. See words.js for more information. */
 export const menuWords = ['BBQ-sås',
-    'torskburgare', 'choron',
+    'torskburgare', 'tomatiserad',
     'sauce', 'ris', 'vegoburgare',
     'Indian style',
     'mangorayadressing', 'chicken',
@@ -163,7 +163,7 @@ export const menuWords = ['BBQ-sås',
     'chorizo', 'rödspätta',
     'vitlöksdressing', 'grekisk',
     'fetaost', 'oliver', 'bites',
-    'msc', 'mangoraya', 'dressing',
+    'MSC', 'mangoraya', 'dressing',
     'panpizza', 'fungi',
     'pizzasallad', 'kycklinggryta',
     'couscous', 'pepparrot',
