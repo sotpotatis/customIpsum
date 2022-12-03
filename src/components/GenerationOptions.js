@@ -18,12 +18,13 @@ export default function GenerationOptions(props){
                 newOptions[optionName] = event.target.checked
             }
             else {
-                newOptions[optionName] = event.target.valueOf()
+                newOptions[optionName] = event.target.value
             }
         }
         else {
           newOptions[optionName] = event.target.selectedOptions[0].value
         }
+        console.log(newOptions[optionName])
         props.setOptions(newOptions)
         setOptionState(!optionState)
     }
