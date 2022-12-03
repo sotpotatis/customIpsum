@@ -1,6 +1,6 @@
 {
-  "name": "buzzwordipsum",
-  "version": "0.1.0",
+  "name": "customipsum",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@iconify/react": "^4.0.1",
