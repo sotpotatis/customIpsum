@@ -24,7 +24,6 @@ export default function GenerationOptions(props){
         else {
           newOptions[optionName] = event.target.selectedOptions[0].value
         }
-        console.log(newOptions[optionName])
         props.setOptions(newOptions)
         setOptionState(!optionState)
     }
