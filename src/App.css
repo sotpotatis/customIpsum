@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Add some custom Tailwind classes */
 @layer components {
     .label {
         @apply font-bold text-xl;

@@ -1,16 +1,25 @@
-import {systemWords} from "./wordLists/systemWords";
+import {organizationWords} from "./wordLists/organizationWords";
 import {webdevWords} from "./wordLists/webdevWords";
+import {menuWords} from "./wordLists/menuWords";
 
 export const wordLists = {
     systemTheory: {
-        wordsList: systemWords,
-        title: "system theory",
-        description: "various words related to system theory (VSM, GST) and other system-analysis related words."
+        wordsList: organizationWords,
+        title: "organizational theory",
+        ipsumPrefix: "Organization",
+        description: "various words related to organization and system theory (VSM, GST) and other system-analysis related words."
     },
     webdev: {
         wordsList: webdevWords,
         title: "webdev",
+        ipsumPrefix: "Webdev",
         description: "various words related to web development and web development tools."
+    },
+    lunch: {
+        wordsList: menuWords,
+        title: "lunch menu",
+        ipsumPrefix: "Eatery",
+        description: "words pulled from my own API for the lunch menu for Eatery Kista Nod. dataset: menus from week 48 (2022) and about 15 weeks back."
     }
 }
 
@@ -46,7 +55,15 @@ const noDelimiter = { // Variable to use when do delimiter is active
     openingChar: null,
     closingChar: null
 }
-export function generateIpsum(words, numberOfParagraphs){
+
+/**
+ * Generates an ipsum-like text.
+ * @param words A list of words to randomize from.
+ * @param numberOfParagraphs A list of paragraphs to choose from.
+ * @param ipsumStart A string to start the text with "{ipsumStart} ipsum dolor sit amet," null to not do it.
+ * @returns {*[]} A list of paragraphs with generated ipsum text in them.
+ */
+export function generateIpsum(words, numberOfParagraphs, ipsumStart){
     let previousWord = null
     let content = []
     for (let paragraphNumber=0;paragraphNumber<numberOfParagraphs;paragraphNumber++){
@@ -56,7 +73,12 @@ export function generateIpsum(words, numberOfParagraphs){
         let currentSentence = null
         console.log(`Generating ${numberOfSentences} sentences...`)
         while (currentSentenceNumber<numberOfSentences){
-            currentSentence = null
+            if (paragraphNumber === 0 && currentSentenceNumber === 0 && ipsumStart !== null){
+                currentSentence = `${ipsumStart} ipsum dolor sit amet `
+            }
+            else {
+                currentSentence = null
+            }
             let currentSentenceLength = 0
             let currentSentenceWantedWordCount = randomNumber(3, 15)
             let currentDelimiter = noDelimiter // Used to track parentheses

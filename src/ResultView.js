@@ -6,8 +6,8 @@ let paragraphsHTML = []
       paragraphsHTML.push(<p>{paragraph}<br/><br/></p>)
     }
     return [
-    <p className="text-blue-600"><button className="flex flex-row bg-white border-0 outline-0 hover:cursor-pointer" onClick={props.goBack}><Icon icon="mdi:arrow-left-thin" inline={true}/> Go back</button></p>,
-    <div className="bg-gray-700 p-3 overflow-scroll text-white rounded-lg border-gray-200 border-2 select-all hover:cursor-pointer">
+    <p key="backButton" id="backButton" className="text-blue-600"><button className="flex flex-row bg-white border-0 outline-0 hover:cursor-pointer" onClick={props.goBack}><Icon icon="mdi:arrow-left-thin" inline={true}/> Go back</button></p>,
+    <div key="result" id="result" className="bg-gray-700 p-3 overflow-scroll text-white rounded-lg border-gray-200 border-2 select-all hover:cursor-pointer">
         {paragraphsHTML}
     </div>]
 }

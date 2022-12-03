@@ -1,3 +1,5 @@
+/* menuWords.js
+Contains a list of web developer-related words. See words.js for more information. */
 export const webdevWords = [
     "HTML",
     "CSS",
@@ -12,6 +14,7 @@ export const webdevWords = [
     "TypeScript",
     "utility-first",
     "Visual Studio Code",
+    "Jetbrains",
     "localhost",
     "stylesheet",
     "DOM",

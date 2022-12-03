@@ -1,4 +1,6 @@
-export const systemWords = [
+/* organizationWords.js
+Contains a list of organization/VSM-related words. See words.js for more information. */
+export const organizationWords = [
     "VSM",
     "maintainability",
     "cybernetic description of the organization",
